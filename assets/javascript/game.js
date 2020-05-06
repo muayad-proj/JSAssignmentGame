@@ -14,7 +14,7 @@ if(randomNumberVar>0.5){
   let currentTeamOneGoalCount=Number(teamOneGoalCountSpanElement.innerHTML);
   let newTeamOneGoalCount=currentTeamOneGoalCount +1;
   teamOneGoalCountSpanElement.innerHTML=newTeamOneGoalCount;
-
+  
 }
 })
 
