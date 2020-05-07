@@ -30,6 +30,7 @@ teamTwoShootButton.addEventListener("click", function() {
   teamTwoShotCountSpanElement.innerHTML=newShotCount;
   let randomNumberVar2=Math.random();
 
+  
   if(randomNumberVar2>0.5){
     let currentTeamTwoGoalCount=Number(teamTwoGoalCountSpanElement.innerHTML);
     let newTeamTwoGoalCount=currentTeamTwoGoalCount +1;
@@ -38,12 +39,15 @@ teamTwoShootButton.addEventListener("click", function() {
   }
   })
 //reset
-
-let RestButton= document.querySelector("#num-resets");
+let RestCountElement=document.querySelector("#num-resets")
+let RestButton= document.querySelector("#reset-button");
 RestButton.addEventListener("click", function() {
-let currenRestCount= Number(RestButton.innerHTML);
-let newRestButton= currenRestCount+1;
-currentTeamOneShotCount=0;
-currentTeamTwoShotCount=0;
+let currenRestCount= Number(RestCountElement.innerHTML);
+let newRestCount= currenRestCount+1;
+RestCountElement.innerHTML = newRestCount;
+teamOneShotCountSpanElement.innerHTML=0;
+teamTwoGoalCountSpanElement.innerHTML=0;
+teamTwoShotCountSpanElement.innerHTML=0;
+teamOneGoalCountSpanElement.innerHTML=0;
 }
 )
